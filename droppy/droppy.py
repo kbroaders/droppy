@@ -303,7 +303,7 @@ def parse_cmdline(argv=None):
     parser.add_argument('-r', '--redo', action='store_true', dest='redo',
                         help='Flag to recalculate results for path, whether '
                         'it has already been performed or not')
-    parser.add_argument('--nproc', action='store', dest='nproc',
+    parser.add_argument('--nproc', type=positive_int, action='store', dest='nproc',
                         help='Number of processes to use for the parallel '
                         'computation. If nproc == 1, the frames are analyzed '
                         'in serial.', default=1)
